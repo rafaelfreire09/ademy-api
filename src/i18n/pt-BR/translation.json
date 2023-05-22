@@ -1,0 +1,21 @@
+{
+  "STRING_MESSAGE": "Deve ser uma string",
+  "NOT_EMPTY_MESSAGE": "Não pode ser vazio",
+  "EMAIL_IS_VALID_MESSAGE": "Deve ser um email válido",
+  "ONLY_NUMBER_MESSAGE": "Deve ser um número",
+  "ONLY_LETTERS_WITH_SPACE_MESSAGE": "Deve ser uma string com apenas letras e espaços",
+  "LENGTH_MESSAGE": "Deve ter entre {constraints.0} e {constraints.1} caracteres",
+  "IS_BOOLEAN_MESSAGE": "Deve ser um booleano",
+
+  "VALIDATE_PASSWORD_MESSAGE": "Deve ter pelo menos 8 caracteres, pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial",
+
+  "AUTH_SERVICE_PASSWORD_OR_EMAIL_INVALID": "Email ou senha inválidos",
+  "AUTH_SERVICE_USER_NOT_FOUND": "Usuário não encontrado",
+  "AUTH_SERVICE_TOKEN_NOT_IS_VALID": "Token inválido",
+  "AUTH_SERVICE_DO_NOT_HAVE_PERMISSION": "Você não tem permissão para acessar este recurso",
+
+  "USERS_SERVICE_USER_ALREADY_EXISTS": "Usuário já existe",
+  "USERS_SERVICE_EMAIL_ALREADY_EXISTS": "Email já existe",
+  "USERS_SERVICE_USER_NOT_FOUND": "Usuário não encontrado",
+  "USERS_SERVICE_USER_DELETED": "O usuário {0.Name} foi deletado"
+}

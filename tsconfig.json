@@ -11,6 +11,11 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@lib/prisma-client": ["src/libs/prisma-client/src"],
+      "@lib/prisma-client/*": ["src/libs/prisma-client/src/*"]
+    }
   }
 }

@@ -17,5 +17,8 @@
   "USERS_SERVICE_USER_ALREADY_EXISTS": "Usuário já existe",
   "USERS_SERVICE_EMAIL_ALREADY_EXISTS": "Email já existe",
   "USERS_SERVICE_USER_NOT_FOUND": "Usuário não encontrado",
-  "USERS_SERVICE_USER_DELETED": "O usuário {0.Name} foi deletado"
+  "USERS_SERVICE_USER_DELETED": "O usuário {0.Name} foi deletado",
+
+  "EBOOKS_SERVICE_EBOOK_NOT_FOUND": "Ebook não encontrado",
+  "EBOOKS_SERVICE_EBOOK_DELETED": "O ebook {0.Name} foi deletado"
 }

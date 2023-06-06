@@ -1,6 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 
 import { insertUsers } from './users';
+import { insertEbooks } from './ebooks';
 
 const client = new PrismaClient();
 
@@ -12,6 +13,11 @@ async function main() {
   console.log('Start seeding users ...🗒️');
   await insertUsers(client);
   console.log('Finish seeding users ✅');
+
+  console.log('--------------------------------------------------');
+  console.log('Start seeding ebooks ...🗒️');
+  await insertEbooks(client);
+  console.log('Finish seeding ebooks ✅');
 
   console.log('--------------------------------------------------');
 }

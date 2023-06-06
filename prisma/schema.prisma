@@ -18,5 +18,23 @@ model User {
   CreatedAt                    DateTime       @default(now())
   UpdatedAt                    DateTime       @updatedAt
 
+  EbooksPurchased Ebook[]
+
   @@map("Users")
+}
+
+model Ebook {
+  EbookID                      Int            @id @default(autoincrement())
+  Title                        String
+  Slug                         String         @unique @default(uuid())
+  Image                        String
+  Author                       String
+  Price                        Float
+  Description                  String         	@db.Text
+  CreatedAt                    DateTime       @default(now())
+  UpdatedAt                    DateTime       @updatedAt
+
+  Users User[]
+
+  @@map("Ebooks")
 }

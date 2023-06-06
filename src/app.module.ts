@@ -6,7 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { HttpModule } from '@nestjs/axios';
 import { AcceptLanguageResolver, I18nModule, QueryResolver } from 'nestjs-i18n';
-import { AuthModule, UsersModule } from './modules';
+import { AuthModule, UsersModule, EbookModule } from './modules';
 
 @Module({
   imports: [
@@ -32,6 +32,7 @@ import { AuthModule, UsersModule } from './modules';
     HttpModule,
     AuthModule,
     UsersModule,
+    EbookModule,
   ],
   controllers: [],
   providers: [],

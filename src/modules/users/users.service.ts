@@ -6,10 +6,14 @@ import { hash } from 'bcrypt';
 
 import { I18n } from 'src/i18n';
 import { I18nContext } from 'nestjs-i18n';
+import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class UsersService {
-  constructor(private readonly usersRepository: UsersRepository) {}
+  constructor(
+    private readonly usersRepository: UsersRepository,
+    private readonly jwtService: JwtService,
+  ) {}
 
   async create(createUserDTO: CreateUserDTO, i18nContext: I18nContext) {
     const { Email, Name, Password } = createUserDTO;
@@ -38,7 +42,18 @@ export class UsersService {
     // @ts-ignore
     delete created.Password;
 
-    return created;
+    const payload = { sub: created.UserID };
+
+    return {
+      User: {
+        UserID: created.UserID,
+        Email: created.Email,
+        Name: created.Name,
+        CreatedAt: created.CreatedAt,
+        UpdatedAt: created.UpdatedAt,
+      },
+      Token: this.jwtService.sign(payload),
+    };
   }
 
   findAll() {

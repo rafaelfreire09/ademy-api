@@ -22,6 +22,10 @@ export class CreateEbookDTO {
 
   @IsString(polyglot(I18n.STRING_MESSAGE))
   @IsNotEmpty(polyglot(I18n.NOT_EMPTY_MESSAGE))
+  Src: string;
+
+  @IsString(polyglot(I18n.STRING_MESSAGE))
+  @IsNotEmpty(polyglot(I18n.NOT_EMPTY_MESSAGE))
   Author: string;
 
   @IsNotEmpty(polyglot(I18n.NOT_EMPTY_MESSAGE))

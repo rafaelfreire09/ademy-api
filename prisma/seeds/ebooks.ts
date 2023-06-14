@@ -6,6 +6,7 @@ export type Ebooks = {
   Title: string;
   Slug: string;
   Image: string;
+  Src: string,
   Author: string;
   Price: number;
   Description: string;
@@ -18,6 +19,7 @@ const getEbooks = () => {
       Title: ebook.title,
       Slug: ebook.slug,
       Image: ebook.image,
+      Src: ebook.src,
       Author: ebook.author,
       Price: ebook.price,
       Description: ebook.description,

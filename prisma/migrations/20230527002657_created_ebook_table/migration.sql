@@ -4,6 +4,7 @@ CREATE TABLE `Ebooks` (
     `Title` VARCHAR(191) NOT NULL,
     `Slug` VARCHAR(191) NOT NULL,
     `Image` VARCHAR(191) NOT NULL,
+    `Src` VARCHAR(191) NOT NULL,
     `Author` VARCHAR(191) NOT NULL,
     `Price` DOUBLE NOT NULL,
     `Description` TEXT NOT NULL,

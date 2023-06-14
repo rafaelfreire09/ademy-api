@@ -5,6 +5,7 @@ export const EbookList = [
     slug: 'a39d9d84befa855e9ff6843434ad29c2',
     image:
       'https://kbimages1-a.akamaihd.net/56faf229-ed8c-41c1-80f1-222621dc7d82/140/215/60/False/os-axiomas-de-zurique.jpg',
+    src: 'https://drive.google.com/file/d/1zt345n8eqtMaiM48vpP6nnLUw_P2uXOE/view',
     author: 'Max Gunther',
     price: 42.9,
     description:
@@ -16,6 +17,7 @@ export const EbookList = [
     slug: '4a1defef4ebad342e532f5c7935985b4',
     image:
       'https://kbimages1-a.akamaihd.net/b54c73b1-5b86-42c2-bbe1-a897b5faf7dc/353/569/90/False/china-183.jpg',
+    src: 'https://drive.google.com/file/d/1Z1eMw16-C5LhUv07SvztYx2JPLKTar0E/view',
     author: 'Elias Jabbour',
     price: 47.0,
     description:
@@ -27,6 +29,7 @@ export const EbookList = [
     slug: 'fb669e796f61add5c1afacdcce8613cf',
     image:
       'https://kbimages1-a.akamaihd.net/5a0b7d2c-2cab-4513-a21b-4218725e9b8b/353/569/90/False/conversas-com-gestores-de-acoes-brasileiros-1.jpg',
+    src: 'https://drive.google.com/file/d/1_mdBGWC4aUnyEFVyb-3QuukXNJBO27bb/view',
     author: 'Luciana Seabra',
     price: 39.9,
     description: `Nesta edição revista e ampliada, a especialista em fundos de investimento Luciana Seabra apresenta as técnicas e a filosofia dos investidores profissionais que mais ganharam dinheiro na bolsa de valores.
@@ -42,6 +45,7 @@ export const EbookList = [
     slug: '5e61afb70bbcd1b3416d76baaf40de64',
     image:
       'https://kbimages1-a.akamaihd.net/56faf229-ed8c-41c1-80f1-222621dc7d82/140/215/60/False/os-axiomas-de-zurique.jpg',
+    src: 'https://drive.google.com/file/d/1VoYXulgydWb-upf2Pug2iJSXXeiF4StF/view',
     author: 'Max Gunther',
     price: 42.9,
     description:
@@ -53,6 +57,7 @@ export const EbookList = [
     slug: '5f972486a39beb83c5081443528277b7',
     image:
       'https://kbimages1-a.akamaihd.net/b54c73b1-5b86-42c2-bbe1-a897b5faf7dc/353/569/90/False/china-183.jpg',
+    src: 'https://drive.google.com/file/d/1icYFLqzqe2IbKSIjKwOsSYsL1ZSnHEQS/view',
     author: 'Elias Jabbour',
     price: 47.0,
     description:
@@ -64,6 +69,7 @@ export const EbookList = [
     slug: 'c63ee77ab4aa25a0166056e04e23b7d0',
     image:
       'https://kbimages1-a.akamaihd.net/5a0b7d2c-2cab-4513-a21b-4218725e9b8b/353/569/90/False/conversas-com-gestores-de-acoes-brasileiros-1.jpg',
+    src: 'https://drive.google.com/file/d/1xDd_5CLzLxq-nZpt_5jegp2fFRRm2VK2/view',
     author: 'Luciana Seabra',
     price: 39.9,
     description: `Nesta edição revista e ampliada, a especialista em fundos de investimento Luciana Seabra apresenta as técnicas e a filosofia dos investidores profissionais que mais ganharam dinheiro na bolsa de valores.

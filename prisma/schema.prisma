@@ -31,6 +31,7 @@ model Ebook {
   Author                       String
   Price                        Float
   Description                  String         	@db.Text
+  Src                          String
   CreatedAt                    DateTime       @default(now())
   UpdatedAt                    DateTime       @updatedAt
 

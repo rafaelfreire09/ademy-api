@@ -14,6 +14,7 @@ export class EbooksRepository {
         Title: true,
         Slug: true,
         Image: true,
+        Src: true,
         Author: true,
         Price: true,
         Description: true,

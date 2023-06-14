@@ -22,6 +22,10 @@ export class UpdateEbookDTO {
 
   @IsString(polyglot(I18n.STRING_MESSAGE))
   @IsOptional()
+  Src?: string;
+
+  @IsString(polyglot(I18n.STRING_MESSAGE))
+  @IsOptional()
   Author?: string;
 
   @IsNumber(polyglot(I18n.ONLY_NUMBER_MESSAGE))

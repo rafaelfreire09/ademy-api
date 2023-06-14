@@ -105,4 +105,15 @@ export class EbooksRepository {
       },
     });
   }
+
+  getSrcBySlug(ebookSlug: string) {
+    return this.prismaService.ebook.findUnique({
+      where: {
+        Slug: ebookSlug,
+      },
+      select: {
+        Src: true
+      },
+    });
+  }
 }

@@ -85,4 +85,16 @@ export class EbooksService {
       }),
     };
   }
+
+  async getSrcBySlug(ebookSlug: string, i18nContext: I18nContext) {
+    const hasEbookData = await this.ebooksRepository.getSrcBySlug(ebookSlug);
+
+    if (!hasEbookData) {
+      throw new BadRequestException(
+        i18nContext.translate(I18n.EBOOKS_SERVICE_EBOOK_NOT_FOUND.message),
+      );
+    }
+
+    return hasEbookData;
+  }
 }

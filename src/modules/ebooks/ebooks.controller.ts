@@ -61,4 +61,12 @@ export class EbooksController {
   ) {
     return await this.ebooksService.remove(id, i18nContext);
   }
+
+  @Get('/downloadBySlug/:id')
+  getSrcBySlug(
+    @Param('id') id: string,
+    @I18n() i18nContext: I18nContext,
+  ) {
+    return this.ebooksService.getSrcBySlug(id, i18nContext);
+  }
 }

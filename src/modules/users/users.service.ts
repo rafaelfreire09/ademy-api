@@ -1,7 +1,7 @@
 import { Injectable, BadRequestException } from '@nestjs/common';
 import { UsersRepository } from './users.repository';
 import { Prisma } from '@prisma/client';
-import { CreateUserDTO, UpdateUserDTO } from './dto';
+import { AddEbookUserDTO, CreateUserDTO, UpdateUserDTO } from './dto';
 import { hash } from 'bcrypt';
 
 import { I18n } from 'src/i18n';
@@ -124,5 +124,51 @@ export class UsersService {
 
   async findOneByEmail(email: string) {
     return await this.usersRepository.findOneByEmail(email);
+  }
+
+  async getEbooksPurchased(userId: number, i18nContext: I18nContext) {
+    const hasEbooksPurchased = await this.usersRepository.getEbooksPurchased(
+      userId,
+    );
+
+    const ebooksList = hasEbooksPurchased.EbooksPurchased.map((ebook) => {
+      delete ebook.Src;
+
+      return ebook
+    })
+
+    return ebooksList;
+  }
+
+  async addEbooksPurchased(
+    userId: number,
+    addEbookUserDTO: AddEbookUserDTO,
+    i18nContext: I18nContext,
+  ) {
+    const hasUserData = await this.usersRepository.findOne(userId);
+
+    if (!hasUserData) {
+      throw new BadRequestException(
+        i18nContext.translate(I18n.USERS_SERVICE_USER_NOT_FOUND.message),
+      );
+    }
+
+    const inputUpdateUserDTO: Prisma.UserUpdateInput = {
+      EbooksPurchased: {
+        connect: [{ EbookID: addEbookUserDTO.EbookId}],
+      },
+    };
+
+    const result = await this.usersRepository.update(userId, inputUpdateUserDTO)
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    // delete result.Name;
+    delete result.UserID;
+    delete result.Email;
+    delete result.CreatedAt;
+    delete result.UpdatedAt;
+
+    return result;
   }
 }

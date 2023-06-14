@@ -77,4 +77,31 @@ export class UsersRepository {
       }
     });
   }
+
+  getEbooksPurchased(userId: number) {
+    return this.prismaService.user.findUnique({
+      where: {
+        UserID: userId,
+      },
+      select: {
+        EbooksPurchased: true,
+      },
+    });
+  }
+
+  addEbooksPurchased(userId: number, ebook: Prisma.UserUpdateInput) {
+    return this.prismaService.user.update({
+      where: {
+        UserID: userId,
+      },
+      select: {
+        EbooksPurchased: true,
+        Name: false,
+        Email: false,
+        CreatedAt: false,
+        UpdatedAt: false
+      },
+      data: ebook,
+    });
+  }
 }

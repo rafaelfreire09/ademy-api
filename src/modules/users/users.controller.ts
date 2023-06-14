@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { I18n, I18nContext } from 'nestjs-i18n';
 import { UsersService } from './users.service';
-import { CreateUserDTO, UpdateUserDTO } from './dto';
+import { AddEbookUserDTO, CreateUserDTO, UpdateUserDTO } from './dto';
 import { AuthGuard } from 'src/shared/guards';
 
 @Controller('users')
@@ -54,5 +54,22 @@ export class UsersController {
     @I18n() i18nContext: I18nContext,
   ) {
     return await this.usersService.remove(id, i18nContext);
+  }
+
+  @Get('/getEbooksPurchased/:id')
+  getEbooksPurchased(
+    @Param('id', ParseIntPipe) id: number,
+    @I18n() i18nContext: I18nContext,
+  ) {
+    return this.usersService.getEbooksPurchased(id, i18nContext);
+  }
+
+  @Put('/addEbook/:id')
+  addEbooksPurchased(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() addEbookDTO: AddEbookUserDTO,
+    @I18n() i18nContext: I18nContext,
+  ) {
+    return this.usersService.addEbooksPurchased(id, addEbookDTO, i18nContext);
   }
 }
